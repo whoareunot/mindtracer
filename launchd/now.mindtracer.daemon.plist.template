@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>now.mindtracer.daemon</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>{{BUN_PATH}}</string>
+        <string>run</string>
+        <string>{{PROJECT_PATH}}/src/cli.ts</string>
+        <string>start</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>{{HOME}}/.mindtracer/mindtracer.log</string>
+    <key>StandardErrorPath</key>
+    <string>{{HOME}}/.mindtracer/mindtracer.log</string>
+    <key>WorkingDirectory</key>
+    <string>{{PROJECT_PATH}}</string>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:{{HOME}}/.bun/bin:{{HOME}}/.nvm/versions/node/v24.14.0/bin</string>
+    </dict>
+</dict>
+</plist>

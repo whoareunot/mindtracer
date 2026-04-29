@@ -1,0 +1,22 @@
+{
+  "name": "mindtracer",
+  "version": "0.1.0",
+  "description": "Auto-archive Typeless voice conversations to a Markdown vault",
+  "module": "src/cli.ts",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "mindtracer": "./src/cli.ts"
+  },
+  "scripts": {
+    "dev": "bun run src/cli.ts",
+    "build": "bun build ./src/cli.ts --compile --outfile bin/mindtracer",
+    "start": "bun run src/cli.ts start"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
