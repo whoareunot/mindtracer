@@ -22,9 +22,9 @@ The catch: every brilliant thing you said is now trapped inside Typeless. When y
 
 ### 🤖 Path A — let an agent do it
 
-If you use Claude Code, Codex, Cursor, or any modern coding agent: send it this repo URL and say:
+If you use Claude Code, Codex CLI, Cursor, Windsurf, Hermes, or any other coding agent that can run shell commands: send it this repo URL and say:
 
-> "Install MindTracer for me. My Typeless DB is at the default macOS location."
+> "Install MindTracer for me. My Typeless DB is at the default location."
 
 The agent will read this README and the included [`SKILL.md`](./SKILL.md), run the install steps, and confirm with you.
 
@@ -37,7 +37,7 @@ curl -fsSL https://bun.sh/install | bash
 # 2. clone this repo
 git clone https://github.com/<you>/mindtracer && cd mindtracer
 
-# 3. set up config + cursor
+# 3. set up config + sync state
 bun run src/cli.ts init
 
 # 4. start the daemon (foreground, for testing)
@@ -93,7 +93,7 @@ Each `daily/YYYY-MM-DD.md` looks like this:
 
 ## 15:08 · Note
 <!-- mindtracer:abc123-... -->
-**焦点 App**：Cursor
+**焦点 App**：VS Code
 
 我刚意识到 SKILL.md 应该是机器可读的协议……
 
@@ -120,6 +120,14 @@ Edit `~/.mindtracer/config.json`:
 | `exclude_dismissed` | `true` | Ignore conversations you canceled |
 | `debounce_seconds` | `5` | Wait this long after Typeless's last DB write before treating an entry as final |
 | `redact_web_url` | `false` | If `true`, store only domain — not full URL |
+
+### 💡 Tip — make your vault sync across devices
+
+The vault is just a folder of Markdown files. Put it inside iCloud Drive, Dropbox, Google Drive, OneDrive, or [Syncthing](https://syncthing.net) — and your daily logs are now available on every device that mounts that folder. Open it with [Obsidian](https://obsidian.md) (Mobile + Desktop), [Bear](https://bear.app), or any plain-text editor on your phone, and you can read or annotate while away from your Mac.
+
+Set `vault_path` in `~/.mindtracer/config.json` to the synced folder, e.g. `~/Library/Mobile Documents/com~apple~CloudDocs/mindtracer-vault`.
+
+> ⚠ MindTracer itself doesn't sync — it just writes files. Whatever you point `vault_path` at handles the rest.
 
 ---
 
@@ -154,8 +162,7 @@ Drop the `SKILL.md` into any agent that supports skills/instructions and it'll k
 - ❌ Transcribe audio (Typeless does it)
 - ❌ Talk to any LLM
 - ❌ Modify the Typeless database
-- ❌ Sync to cloud
-- ❌ Run on Windows / Linux (Typeless is macOS-only)
+- ❌ Sync to cloud (your vault is just files — put it in iCloud / Dropbox / Syncthing yourself if you want sync)
 
 ---
 
