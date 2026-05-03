@@ -35,7 +35,7 @@ The agent will read this README and the included [`SKILL.md`](./SKILL.md), run t
 curl -fsSL https://bun.sh/install | bash
 
 # 2. clone this repo
-git clone https://github.com/<you>/mindtracer && cd mindtracer
+git clone https://github.com/mznowhere/mindtracer && cd mindtracer
 
 # 3. set up config + sync state
 bun run src/cli.ts init

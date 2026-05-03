@@ -75,4 +75,4 @@ bunx tsc --noEmit                          # type-check (no test framework yet)
 
 - **Public docs:** `README.md` (user-facing), `SKILL.md` (agent-facing protocol for v0.2 organization layer)
 - **Strategy + research:** Anything related to *why* — see the user's `~/.claude/projects/-Users-bxx-----/memory/` for promotion strategy, voice-vs-typing research, community choice
-- **GitHub repo:** `https://github.com/whoareunot/mindtracer` (public, MIT)
+- **GitHub repo:** `https://github.com/mznowhere/mindtracer` (public, MIT)
