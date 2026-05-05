@@ -1,6 +1,6 @@
 # MindTracer
 
-> Auto-archive your Typeless voice conversations to a Markdown vault — so an AI agent can organize them while you sleep.
+> Auto-archive your Typeless voice conversations to a Markdown vault — so AI agents can organize them.
 
 You already use [Typeless](https://typeless.com) every day. Every Q+A you've had with its built-in LLM, every note you've dictated — it's all in a local SQLite cache that no other app reads. **MindTracer** runs in the background, watches that cache, and writes each conversation as a Markdown file to a folder of your choice.
 
